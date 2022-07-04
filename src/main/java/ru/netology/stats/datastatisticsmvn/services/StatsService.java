@@ -11,11 +11,12 @@ public class StatsService {
     }
 
     public int getAverageAmountSale(long[] sales) {
+        long sum = getAmountSale(sales);
         long average = 0;
         if (sales.length > 0) {
-            double sum = 0;
+            //double sum = 0;
             for (int i = 0; i < sales.length; i++) {
-                sum += sales[i];
+                //      sum += sales[i];
             }
             average = (long) (sum / sales.length);
         }
@@ -49,14 +50,15 @@ public class StatsService {
     }
 
     public int getQuantityMinMonthSale(long[] sales) {
-        long average = 0;
-        if (sales.length > 0) {
-            double sum = 0;
-            for (int i = 0; i < sales.length; i++) {
-                sum += sales[i];
-            }
-            average = (long) (sum / sales.length);
-        }
+        // long average = 0;
+        //  if (sales.length > 0) {
+        //     double sum = 0;
+        //      for (int i = 0; i < sales.length; i++) {
+        //         sum += sales[i];
+        //     }
+        //     average = (long) (sum / sales.length);
+        //   }
+        long average = getAverageAmountSale(sales);
         int number = 0;
         for (long sale : sales) {
             if (sale < average) {
@@ -69,14 +71,15 @@ public class StatsService {
     }
 
     public int getQuantityMaxMonthSale(long[] sales) {
-        long average = 0;
-        if (sales.length > 0) {
-            double sum = 0;
-            for (int i = 0; i < sales.length; i++) {
-                sum += sales[i];
-            }
-            average = (long) (sum / sales.length);
-        }
+        //  long average = 0;
+        // if (sales.length > 0) {
+        //    double sum = 0;
+        //    for (int i = 0; i < sales.length; i++) {
+        //        sum += sales[i];
+        //   }
+        //    average = (long) (sum / sales.length);
+        // }
+        long average = getAverageAmountSale(sales);
         int number = 0;
         for (long sale : sales) {
             if (sale > average) {
