@@ -63,10 +63,8 @@ public class StatsService {
         for (long sale : sales) {
             if (sale < average) {
                 number = number + 1;
-
             }
         }
-
         return (int) number;
     }
 
@@ -84,10 +82,8 @@ public class StatsService {
         for (long sale : sales) {
             if (sale > average) {
                 number = number + 1;
-
             }
         }
-
         return (int) number;
     }
 }
